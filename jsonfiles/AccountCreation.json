@@ -1,0 +1,264 @@
+{
+  "api_endpoint": "api/v2/doctor/",
+  "cases":[
+    {
+      "name":"AccountCreation-001",
+      "desc":"",
+      "input":{
+        "first_name": "",
+        "last_name": "data",
+        "dob": "1981-04-18",
+        "email": "amit@gmail.com",
+        "contact_number": "+919630381869",
+        "city": {
+            "id": 1,
+            "name": "Mumbai",
+            "city_code": "MUM"
+        },
+        "qualifications": "MSD",
+        "specialities": "Abc",
+        "reg_no": "Test",
+        "is_trial": 0,
+        "is_staff": 0
+      },
+      "expected_output":{"non_field_errors":
+        [
+          "Empty Field : first_name "
+        ]
+      },
+      "result":""
+    },
+    {
+      "name":"AccountCreation-002",
+      "desc":"",
+      "input":{
+        "first_name": "test1",
+        "last_name": "",
+        "dob": "1981-04-18",
+        "email": "amit@gmail.com",
+        "contact_number": "+919630381869",
+        "city": {
+            "id": 1,
+            "name": "Mumbai",
+            "city_code": "MUM"
+        },
+        "qualifications": "MSD",
+        "specialities": "Abc",
+        "reg_no": "Test",
+        "is_trial": 0,
+        "is_staff": 0
+      },
+      "expected_output":{"non_field_errors":
+        [
+          "Empty Field : last_name "
+        ]
+      },
+      "result":""
+    },
+    {
+      "name":"AccountCreation-003",
+      "desc":"",
+      "input":{
+        "first_name": "test1",
+        "last_name": "data",
+        "dob": "1981-04-18",
+        "email": "",
+        "contact_number": "+919630381869",
+        "city": {
+            "id": 1,
+            "name": "Mumbai",
+            "city_code": "MUM"
+        },
+        "qualifications": "MSD",
+        "specialities": "Abc",
+        "reg_no": "Test",
+        "is_trial": 0,
+        "is_staff": 0
+      },
+      "expected_output":{"non_field_errors":
+        [
+          "Empty Field : email "
+        ]
+      },
+      "result":""
+    },
+     {
+      "name":"AccountCreation-004",
+      "desc":"",
+      "input":{
+        "first_name": "test1",
+        "last_name": "data",
+        "dob": "1981-04-18",
+        "email": "qwerty",
+        "contact_number": "+919630381869",
+        "city": {
+            "id": 1,
+            "name": "Mumbai",
+            "city_code": "MUM"
+        },
+        "qualifications": "MSD",
+        "specialities": "Abc",
+        "reg_no": "Test",
+        "is_trial": 0,
+        "is_staff": 0
+      },
+      "expected_output":{"email":
+        [
+          "Enter a valid email address."
+        ]
+      },
+      "result":""
+    },
+    {
+      "name":"AccountCreation-005",
+      "desc":"",
+      "input":{
+        "first_name": "test1",
+        "last_name": "data",
+        "dob": "1981-04-18",
+        "email": "amit@gmail.com",
+        "contact_number": "",
+        "city": {
+            "id": 1,
+            "name": "Mumbai",
+            "city_code": "MUM"
+        },
+        "qualifications": "MSD",
+        "specialities": "Abc",
+        "reg_no": "Test",
+        "is_trial": 0,
+        "is_staff": 0
+      },
+      "expected_output":{"non_field_errors":
+        [
+          "Empty Field : contact_number "
+        ]
+      },
+      "result":""
+    },
+    {
+      "name":"AccountCreation-006",
+      "desc":"",
+      "input":{
+        "first_name": "test1",
+        "last_name": "data",
+        "dob": "1981-04-18",
+        "email": "amit@gmail.com",
+        "contact_number": "+919630381869",
+        "qualifications": "MSD",
+        "specialities": "Abc",
+        "reg_no": "Test",
+        "is_trial": 0,
+        "is_staff": 0
+      },
+      "expected_output": {"non_field_errors":
+        [
+          "Empty Field : city "
+        ]
+      },
+      "result":""
+    },
+    {
+      "name":"AccountCreation-007",
+      "desc":"",
+      "input":{
+        "first_name": "test1",
+        "last_name": "data",
+        "dob": "1981-04-18",
+        "email": "amit@gmail.com",
+        "contact_number": "+919630381869",
+        "city": {
+            "id": 1,
+            "name": "Mumbai",
+            "city_code": "MUM"
+        },
+        "qualifications": "MSD",
+        "specialities": "",
+        "reg_no": "Test",
+        "is_trial": 0,
+        "is_staff": 0
+      },
+      "expected_output":{"non_field_errors":
+        [
+          "Empty Field : specialities "
+        ]
+      },
+      "result":""
+    },
+    {
+      "name":"AccountCreation-008",
+      "desc":"",
+      "input":{
+        "first_name": "test1",
+        "last_name": "data",
+        "dob": "1981-04-18",
+        "email": "amit@gmail.com",
+        "contact_number": "+919630381869",
+        "city": {
+            "id": 1,
+            "name": "Mumbai",
+            "city_code": "MUM"
+        },
+        "qualifications": "MSD",
+        "specialities": "xyz",
+        "reg_no": "",
+        "is_trial": 0,
+        "is_staff": 0
+      },
+      "expected_output":{
+        "reg_no": [
+          "This field is required."
+        ]
+      },
+      "result":""
+    },
+    {
+      "name": "AccountCreation-009",
+      "desc": "",
+      "input": {
+        "first_name": "testnew",
+        "last_name": "data",
+        "dob": "1981-04-18",
+        "email": "amit@gmail.com",
+        "contact_number": "+919630381869",
+        "city": {
+          "id": 1,
+          "name": "Mumbai",
+          "city_code": "MUM"
+        },
+        "qualifications": "MSD",
+        "specialities": "xyz",
+        "reg_no": "123",
+        "is_trial": 0,
+        "is_staff": 0
+      },
+      "expected_output": "",
+      "result": ""
+    },
+    {
+      "name": "AccountCreation-010",
+      "desc": "",
+      "input": {
+        "first_name": "testnew",
+        "last_name": "data",
+        "dob": "1981-04-18",
+        "email": "amit@gmail.com",
+        "contact_number": "+919630381869",
+        "city": {
+          "id": 1,
+          "name": "Mumbai",
+          "city_code": "MUM"
+        },
+        "qualifications": "MSD",
+        "specialities": "xyz",
+        "reg_no": "123",
+        "is_trial": 0,
+        "is_staff": 0
+      },
+      "expected_output": {"error": "Doctor with this first and last name already exist."},
+      "result": ""
+    }
+
+
+  ]
+}

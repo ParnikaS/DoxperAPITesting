@@ -1,0 +1,54 @@
+{
+  "api_endpoint": "api/auth_token/",
+  "cases":[
+    {
+      "name":"",
+      "desc":"",
+      "input":{"username": "","password": "td"},
+      "expected_output":{"error": "Missing username/password"},
+      "result":""
+    },
+    {
+      "name":"",
+      "desc":"",
+      "input":{"username": "test.data","password": ""},
+      "expected_output":{"error": "Missing username/password"},
+      "result":""
+    },
+    {
+      "name":"",
+      "desc":"",
+      "input":{"username": "wrong-username","password": "wrong-password"},
+      "expected_output":{"error": "Invalid username/password"},
+      "result":""
+    },
+    {
+      "name":"",
+      "desc":"",
+      "input":{"username": "","password": ""},
+      "expected_output":{"error": "Invalid username "},
+      "result":""
+    },
+    {
+      "name":"",
+      "desc":"",
+      "input":{"username": "wrong-username","password": "td"},
+      "expected_output":{"error": "Invalid username/password"},
+      "result":""
+    },
+    {
+      "name":"",
+      "desc":"",
+      "input":{"username": "test.data","password": "wrong-password"},
+      "expected_output":{"error": "Invalid username/password"},
+      "result":""
+    },
+    {
+      "name":"",
+      "desc":"",
+      "input":{"username": "test.data","password": "td"},
+      "expected_output":{"token":""},
+      "result":""
+    }
+  ]
+}

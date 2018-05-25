@@ -1,0 +1,123 @@
+{
+  "api_endpoint": "api/v2/labreports/?source=doctor_app",
+  "cases": [
+    {
+      "name": "CreateReport-001",
+      "desc": "Creating report Without Giving Type",
+      "input": {
+        "description": "This is the description",
+        "type": "",
+        "to": {
+          "patient_id": 859748,
+          "name": "test2",
+          "phone": "+919594939291",
+          "gender": "F",
+          "dob": "1990-04-18"
+        },
+        "pages": [
+          {
+            "page_num": 1,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Fireworks_public_domain_image.jpg"
+          }
+        ]
+      },
+      "expected_output": {
+        "report_type": [
+          "This field is required."
+        ]
+      },
+      "result": ""
+    },
+    {
+      "name": "CreateReport-002",
+      "desc": "Creating Report Without giving Patient Details",
+      "input": {
+        "description": "This is the description",
+        "type": "report",
+        "to": {
+        },
+        "pages": [
+          {
+            "page_num": 1,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Fireworks_public_domain_image.jpg"
+          }
+        ]
+      },
+      "expected_output": {
+        "error": "Could not find or create a patient."
+      },
+      "result": ""
+    },
+    {
+      "name": "CreateReport-003",
+      "desc": "",
+      "input": {},
+      "expected_output": {},
+      "result": ""
+    },
+    {
+      "name": "CreateReport-004",
+      "desc": "Creating Report Without giving Page Num",
+      "input": {
+        "description": "This is the description",
+        "type": "report",
+        "to": {
+          "patient_id": 859748,
+          "name": "test2",
+          "phone": "+919594939291",
+          "gender": "F",
+          "dob": "1990-04-18"
+        },
+        "pages": [
+          {
+            "page_num": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Fireworks_public_domain_image.jpg"
+          }
+        ]
+      },
+      "expected_output": {
+        "page_num": [
+          "This field is required."
+        ]
+      },
+      "result": ""
+    },
+    {
+      "name": "CreateReport-005",
+      "desc": "",
+      "input": {
+        "description": "This is the description",
+        "type": "report",
+        "to": {
+          "patient_id": 859748,
+          "name": "test2",
+          "phone": "+919594939291",
+          "gender": "F",
+          "dob": "1990-04-18"
+        },
+        "pages": [
+          {
+            "page_num": 1,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Fireworks_public_domain_image.jpg"
+          }
+        ]
+      },
+      "expected_output": {},
+      "result": ""
+    },
+    {
+      "name": "CreateReport-006",
+      "desc": "",
+      "input": {},
+      "expected_output": {},
+      "result": ""
+    },
+    {
+      "name": "CreateReport-007",
+      "desc": "",
+      "input": {},
+      "expected_output": {},
+      "result": ""
+    }
+  ]
+}

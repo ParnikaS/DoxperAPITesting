@@ -1,0 +1,8 @@
+{
+  "base_url": "https://test.doxper.com/",
+  "headers": {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+    "Authorization": "Token 443808ce943c7e64679046f5d74446f2669baa65"
+  }
+}
